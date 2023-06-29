@@ -1,0 +1,281 @@
+{
+    "personagens": {
+        "homem-aranha": {
+            "nome": "Homem Aranha",
+            "imagem": "homem-aranha.jpg"
+        },
+        "superman": {
+            "nome": "Super Homem",
+            "imagem": "superman.jpg"
+        },
+        "mulher-maravilha": {
+            "nome": "Mulher Maravilha",
+            "imagem": "mulher_maravilha.jpg"
+        },
+        "batman": {
+            "nome": "Batman",
+            "imagem": "batman.jpg"
+        },
+        "homem-de-ferro": {
+            "nome": "Homem de Ferro",
+            "imagem": "homem-de-ferro.jpg"
+        },
+        "capitao-america": {
+            "nome": "Capitão América",
+            "imagem": "capitao-america.jpg"
+        },
+        "viuva-negra": {
+            "nome": "Viúva Negra",
+            "imagem": "viuva-negra.jpg"
+        },
+        "feiticeira-escarlate": {
+            "nome": "Feiticeira Escarlate",
+            "imagem": "scarlet-witchs.png"
+        },
+        "capita-marvel": {
+            "nome": "Capitã Marvel",
+            "imagem": "capita_marvel.jpg"
+        },
+        "pantera-negra": {
+            "nome": "Pantera Negra",
+            "imagem": "pantera-negra.jpg"
+        },
+        "tempestade": {
+            "nome": "Tempestade",
+            "imagem": "storm.jpg"
+        },
+        "supergirl": {
+            "nome": "Supergirl",
+            "imagem": "supergirl.jpg"
+        },
+        "thor": {
+            "nome": "Thor",
+            "imagem": "thor.jpg"
+        },
+        "flash": {
+            "nome": "Flash",
+            "imagem": "flash.jpeg"
+        },
+        "aquaman": {
+            "nome": "Aquaman",
+            "imagem": "aquaman.jpg"
+        },
+        "doutor-estranho": {
+            "nome": "Doutor Estranho",
+            "imagem": "doutor-estranho.jpg"
+        }
+    },
+    "perguntas": {
+        "pergunta1": "Seu personagem é homem?",
+        "pergunta2": "Seu personagem tem cabelo preto?",
+        "pergunta3": "Seu personagem tem a habilidade de voar?",
+        "pergunta4": "Seu personagem usa capa?",
+        "pergunta5": "Seu personagem usa traje especial/armadura?",
+        "pergunta6": "Seu personagem tem força sobre humana?",
+        "pergunta7": "Seu personagem usa alguma arma?",
+        "pergunta8": "Seu personagem tem barba?",
+        "pergunta9": "Seu personagem é terráqueo?",
+        "pergunta10": "Seu personagem tem a identidade secreta?",
+        "pergunta11": "Seu personagem tem poderes?"
+    },
+    "respostas": {
+        "pergunta1": {
+            "homem-aranha": "sim",
+            "superman": "sim",
+            "mulher-maravilha": "nao",
+            "batman": "sim",
+            "homem-de-ferro": "sim",
+            "capitao-america": "sim",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "nao",
+            "tempestade": "nao",
+            "supergirl": "nao",
+            "thor": "sim",
+            "flash": "sim",
+            "aquaman": "sim",
+            "doutor-estranho": "sim"
+        },
+        "pergunta2": {
+            "homem-aranha": "sim",
+            "superman": "sim",
+            "mulher-maravilha": "sim",
+            "batman": "sim",
+            "homem-de-ferro": "sim",
+            "capitao-america": "nao",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "sim",
+            "tempestade": "nao",
+            "supergirl": "nao",
+            "thor": "nao",
+            "flash": "sim",
+            "aquaman": "nao",
+            "doutor-estranho": "sim"
+        },
+        "pergunta3": {
+            "homem-aranha": "nao",
+            "superman": "sim",
+            "mulher-maravilha": "sim",
+            "batman": "nao",
+            "homem-de-ferro": "sim",
+            "capitao-america": "nao",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "sim",
+            "capita-marvel": "sim",
+            "pantera-negra": "nao",
+            "tempestade": "sim",
+            "supergirl": "sim",
+            "thor": "sim",
+            "flash": "nao",
+            "aquaman": "nao",
+            "doutor-estranho": "sim"
+        },
+        "pergunta4": {
+            "homem-aranha": "nao",
+            "superman": "sim",
+            "mulher-maravilha": "nao",
+            "batman": "sim",
+            "homem-de-ferro": "nao",
+            "capitao-america": "nao",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "nao",
+            "tempestade": "sim",
+            "supergirl": "sim",
+            "thor": "sim",
+            "flash": "nao",
+            "aquaman": "nao",
+            "doutor-estranho": "nao"
+        },
+        "pergunta5": {
+            "homem-aranha": "sim",
+            "superman": "nao",
+            "mulher-maravilha": "nao",
+            "batman": "sim",
+            "homem-de-ferro": "sim",
+            "capitao-america": "nao",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "sim",
+            "tempestade": "nao",
+            "supergirl": "nao",
+            "thor": "nao",
+            "flash": "sim",
+            "aquaman": "nao",
+            "doutor-estranho": "sim"
+        },
+        "pergunta6": {
+            "homem-aranha": "sim",
+            "superman": "sim",
+            "mulher-maravilha": "sim",
+            "batman": "nao",
+            "homem-de-ferro": "nao",
+            "capitao-america": "sim",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "nao",
+            "tempestade": "nao",
+            "supergirl": "nao",
+            "thor": "nao",
+            "flash": "nao",
+            "aquaman": "sim",
+            "doutor-estranho": "nao"
+        },
+        "pergunta7": {
+            "homem-aranha": "nao",
+            "superman": "nao",
+            "mulher-maravilha": "sim",
+            "batman": "sim",
+            "homem-de-ferro": "sim",
+            "capitao-america": "nao",
+            "viuva-negra": "sim",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "nao",
+            "tempestade": "nao",
+            "supergirl": "nao",
+            "thor": "nao",
+            "flash": "nao",
+            "aquaman": "sim",
+            "doutor-estranho": "nao"
+        },
+        "pergunta8": {
+            "homem-aranha": "nao",
+            "superman": "nao",
+            "mulher-maravilha": "nao",
+            "batman": "nao",
+            "homem-de-ferro": "sim",
+            "capitao-america": "nao",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "sim",
+            "tempestade": "nao",
+            "supergirl": "nao",
+            "thor": "sim",
+            "flash": "nao",
+            "aquaman": "nao",
+            "doutor-estranho": "sim"
+        },
+        "pergunta9": {
+            "homem-aranha": "sim",
+            "superman": "sim",
+            "mulher-maravilha": "sim",
+            "batman": "sim",
+            "homem-de-ferro": "sim",
+            "capitao-america": "sim",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "sim",
+            "capita-marvel": "sim",
+            "pantera-negra": "sim",
+            "tempestade": "sim",
+            "supergirl": "nao",
+            "thor": "sim",
+            "flash": "sim",
+            "aquaman": "sim",
+            "doutor-estranho": "nao"
+        },
+        "pergunta10": {
+            "homem-aranha": "sim",
+            "superman": "nao",
+            "mulher-maravilha": "nao",
+            "batman": "sim",
+            "homem-de-ferro": "sim",
+            "capitao-america": "nao",
+            "viuva-negra": "nao",
+            "feiticeira-escarlate": "sim",
+            "capita-marvel": "nao",
+            "pantera-negra": "sim",
+            "tempestade": "sim",
+            "supergirl": "sim",
+            "thor": "nao",
+            "flash": "nao",
+            "aquaman": "sim",
+            "doutor-estranho": "sim"
+        },
+        "pergunta11": {
+            "homem-aranha": "nao",
+            "superman": "sim",
+            "mulher-maravilha": "sim",
+            "batman": "nao",
+            "homem-de-ferro": "nao",
+            "capitao-america": "nao",
+            "viuva-negra": "sim",
+            "feiticeira-escarlate": "nao",
+            "capita-marvel": "nao",
+            "pantera-negra": "sim",
+            "tempestade": "nao",
+            "supergirl": "nao",
+            "thor": "sim",
+            "flash": "sim",
+            "aquaman": "nao",
+            "doutor-estranho": "nao"
+        }
+    }
+}

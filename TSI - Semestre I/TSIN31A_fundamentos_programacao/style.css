@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+    font-size: 28px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
+#pontuacao {
+    text-align: center;
+    font-size: large;
+    padding: 10px;
+    background-color: burlywood;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#pontuacao_valor {
+    color: #333;
+    font-size: 60px;
+}
+
+#personagens-div {
+    flex-basis: 65%;
+}
+
+#perguntas-div {
+    flex-basis: 35%;
+    margin-left: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+@keyframes tremor {
+    0% { transform: translate(0, 0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+}
+
+.tremor {
+    animation: tremor 0.5s alternate;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    #personagens-div {
+        flex-basis: 100%;
+    }
+
+    #perguntas-div {
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+}
+
+ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.texto-tachado {
+    text-decoration: line-through;
+}
+
+.resposta-pergunta {
+    font-weight: bold;
+}
+
+.link-personagem {
+    text-decoration: underline;
+    color: dodgerblue;
+    font-weight: bold;
+    cursor: pointer;
+}
