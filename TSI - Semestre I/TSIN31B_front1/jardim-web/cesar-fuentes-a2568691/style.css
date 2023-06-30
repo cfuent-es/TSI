@@ -1,0 +1,195 @@
+:root{
+    --m-blue: #009bd9;
+    --m-yellow: #fbce00;
+    --m-red: #e62310;
+    --m-green: #44ae35;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-size: 16px;
+    background-image: url('img/nintendo-super-mario-world.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#container {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 50px auto;
+    width: 800px;
+    height: 500px;
+    overflow: auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Super Mario World Text Box', sans-serif;
+    color: var(--m-red);
+    font-size: 4em;
+    text-align: center;
+}
+
+h1::first-letter{
+    color: var(--m-yellow);
+}
+
+h2 {
+    font-family: 'Super Mario World Text Box', sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Super Mario World Text Box', sans-serif;
+    font-size: 2em;
+    color: var(--m-green);
+    margin-top: 40px;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+acronym {
+    color: var(--m-blue);
+    text-decoration: overline;
+    font-weight: 500;
+}
+
+acronym:hover {
+    color: var(--m-red);
+}
+
+a {
+    cursor: url('img/mario-icone.png'), auto;
+    color: var(--m-yellow);
+}
+
+a:hover {
+    color: var(--m-red);
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 300px;
+    /*background: var(--m-green) url('img/flower-green.gif') no-repeat 1% 48%;*/
+    background-image: url('img/flower-green.gif');
+    background-color: var(--m-green);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px;
+    background-origin: content-box;
+    padding: 10px 10px 10px 10px;
+    margin-left: -280px;
+    transition: 0.5s;
+    font-size: 0.8em;
+}
+  
+.sidebar:hover {
+    background-image: url('img/ghost.gif');
+    background-color: var(--m-green);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 60px 45px;
+    background-origin: content-box;
+    margin-left: 0px;
+    transition: 0.5s;
+}
+
+h3.select, h3.archives, h3.resources {
+    font-size: 1.2em;
+    color: var(--m-red);
+}
+
+h3.archives {
+    font-size: 1.2em;
+    color: var(--m-red);
+}
+
+ul {
+    list-style-type: none;
+}
+  
+li {
+    list-style-image: url('img/mario-start.png');
+    padding: 0 0 2px 5px;
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-size: 1.2em;
+    color: white;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li acronym {
+    color: white;
+    font-size: 0.6em;
+}
+
+#jar-header{
+    border-bottom: #F2B705 2px solid;
+    padding-bottom: 40px;
+    background-image: url('img/mario-bros-walking.gif');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 8%;
+    animation: marioWalk 5s linear infinite;
+}
+
+@keyframes marioWalk {
+    0% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Personalização barra de rolagem Webkit */
+
+::-webkit-scrollbar {
+    width: 16px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--m-blue);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--m-yellow);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--m-red);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--m-red);
+}
+
+/* Itens ocultos */
+
+#jar-summary{
+    display: none;
+}
