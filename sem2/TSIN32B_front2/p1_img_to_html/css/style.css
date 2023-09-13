@@ -1,0 +1,48 @@
+@font-face {
+    font-family: Archia;
+    src: url(../fonts/archia-regular-webfont.ttf)
+}
+
+@font-face {
+    font-family: Sonder;
+    src: url(../fonts/SonderRegular.otf)
+}
+
+
+.home1 {
+    background: url("../images/img1.png") no-repeat center top;
+    background-size: cover;
+    height: 1600px;
+}
+
+.home2 {
+    background-color: #fcf7e7;
+    padding-top: 100px;
+}
+
+.fonte-azul {
+    font-family: Archia sans-serif;
+    color: #7f71ac;
+    font-weight: 600;
+}
+
+.home2 h1 {
+    font-family: Sonder sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.home2 p {
+    font-family: Archia sans-serif;
+}
+
+.home3 {
+    background: url(../images/home3-bg-red80.png) no-repeat bottom right;
+    background-color: #f6d48c;
+    padding-top: 300px;
+    min-height: 1000px;
+}
+
+.home4{
+    background-color: #11314a;
+}
