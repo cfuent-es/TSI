@@ -46,3 +46,65 @@
 .home4{
     background-color: #11314a;
 }
+
+.home4-interno{
+    background-color: #2c6198;
+    color: white;
+    max-width: 900px;
+}
+
+.home4-interno h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.home4-interno p {
+    font-size: 2rem;
+}
+
+.home4-btn {
+    border-radius: 30px;
+    font-size: 2rem;
+    background-color: #3c82ca;
+    border: 0;
+    font-weight: 600;
+}
+
+.home5{
+    background-color: #fcf7e7;
+}
+
+.home5-img{
+    width: 425px;
+    height: 555px;
+    border-radius: 10px;
+}
+
+.home5-img1{
+    background: url(../images/home5-img1.jpg) center no-repeat;
+}
+
+.home5-img2{
+    background: url(../images/home5-img2.jpg) center no-repeat;
+}
+
+.home5-img3{
+    background: url(../images/home5-img3.jpg) center no-repeat;
+}
+
+.home5-img4{
+    background: url(../images/home5-img4.jpg) center no-repeat;
+}
+
+.home6{
+    background-color: #ededed;
+}
+
+.home6-btn{
+    border-radius: 30px;
+    font-size: 2rem;
+    background-color: #3c82ca;
+    border: 0;
+    font-weight: 600;
+}
