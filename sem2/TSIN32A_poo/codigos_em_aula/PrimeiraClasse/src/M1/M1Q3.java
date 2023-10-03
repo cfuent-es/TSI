@@ -1,3 +1,4 @@
+package M1;
 import java.util.Scanner;
 
 public class M1Q3 {
