@@ -36,6 +36,8 @@ public class M2Q2 {
 		}
 		
 		System.out.print("Pode doar sangue");
+		
+		entrada.close();
 
 	}
 

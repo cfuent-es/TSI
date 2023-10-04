@@ -29,11 +29,12 @@ public class M2Q3 {
 		System.out.print("números armazenados: "); 
 		for(int num : numeros) {
 			System.out.print(num + "; ");
-			if(numero % 2 == 0)
+			if(num % 2 == 0)
 				pares += num;
 		}
 		System.out.println();
-		System.out.println("soma dos números pares:" + pares);
+		System.out.println("soma dos números pares: " + pares);
+		entrada.close();
 	}
 
 }

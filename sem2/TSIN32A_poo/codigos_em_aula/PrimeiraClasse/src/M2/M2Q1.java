@@ -45,7 +45,7 @@ public class M2Q1 {
 				
 		}
 		
-
+		entrada.close();
 	}
 
 }
