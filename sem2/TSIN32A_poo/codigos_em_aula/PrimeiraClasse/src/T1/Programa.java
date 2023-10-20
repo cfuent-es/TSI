@@ -29,7 +29,55 @@ class Programa {
                                                                         "9 - Sair \n\n" +
                                                                         "Digite a opção desejada: "));
 
-            
+            int distancia, velocidade, quantidade, tipoCombustivel;
+            switch(opcao){
+                case 1:
+                    distancia = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a distância a ser percorrida (km): "));
+                    velocidade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a velocidade média (km/h): "));
+                    esportivo.andar(distancia, velocidade);
+                    break;
+                case 2:
+                    distancia = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a distância a ser percorrida (km): "));
+                    velocidade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a velocidade média (km/h): "));
+                    sedan.andar(distancia, velocidade);
+                    break;
+                case 3:
+                    tipoCombustivel = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o tipo de combustível: \n\n" +
+                                                                                                "1 - Gasolina \n" +
+                                                                                                "2 - Álcool \n" +
+                                                                                                "3 - Diesel \n\n" +
+                                                                                                "Digite a opção desejada: "));
+                    quantidade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a quantidade de combustível a ser abastecida: "));
+                    esportivo.abastecer(quantidade, Combustivel.getCombustivel(tipoCombustivel));
+                    break;
+                case 4:
+                    tipoCombustivel = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o tipo de combustível: \n\n" +
+                                                                                                "1 - Gasolina \n" +
+                                                                                                "2 - Álcool \n" +
+                                                                                                "3 - Diesel \n\n" +
+                                                                                                "Digite a opção desejada: "));
+                    quantidade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a quantidade de combustível a ser abastecida: "));
+                    sedan.abastecer(quantidade, Combustivel.getCombustivel(tipoCombustivel));
+                    break;
+                case 5:
+                    esportivo.arrumarFreios(new FreiosABS());
+                    break;
+                case 6:
+                    sedan.arrumarFreios(new FreiosTambor());
+                    break;
+                case 7:
+                    JOptionPane.showMessageDialog(null, "O Carro Esportivo percorreu " + esportivo.getQuilometragem() + "km");
+                    break;
+                case 8:
+                    JOptionPane.showMessageDialog(null, "O Carro Sedan percorreu " + sedan.getQuilometragem() + "km");
+                    break;
+                case 9:
+                    JOptionPane.showMessageDialog(null, "Obrigado por utilizar o Programa Carros!");
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null, "Opção inválida!");
+                    break;
+            }
         }
     }
 }

@@ -18,16 +18,48 @@ public abstract class Veiculo {
 
     public void setQuilometragem(int quilometragem) {
         if (quilometragem >= 0) {
-            this.quilometragem = quilometragem;
+            this.quilometragem += quilometragem;
         }
     }
 
-    public boolean andar(int distancia, int velocidade)
+    public TanqueCombustivel getTanqueCombustivel() {
+        return tanqueCombustivel;
+    }
+
+    public void setTanqueCombustivel(TanqueCombustivel tanqueCombustivel) {
+        this.tanqueCombustivel = tanqueCombustivel;
+    }
+
+    public Freios getFreios() {
+        return freios;
+    }
+
+    public void setFreios(Freios freios) {
+        this.freios = freios;
+    }
+
+    public boolean andar(int distancia, int velocidade, int consumo)
     {
         if(freios.getVidaUtilRestante() < 0){
             JOptionPane.showMessageDialog(null, "Erro: os freios estão desgastados!", "Alerta de erro", JOptionPane.ERROR_MESSAGE);
+            return false;
         }
-        return false;
+
+        if(this.getTanqueCombustivel().getVolumeAtual() < consumo){
+            JOptionPane.showMessageDialog(
+                null, 
+                "Não há combustível suficiente para a distância solicitada e velocidade!", 
+                "Combustível Insuficiente", 
+                JOptionPane.ERROR_MESSAGE
+            );
+            return false;
+        }
+
+        this.setQuilometragem(distancia);
+        this.getTanqueCombustivel().setVolumeAtual(consumo);
+        this.getFreios().usarFreios(distancia, velocidade);
+
+        return true;
     };
 
     public void abastecer(int quantidade, Combustivel combustivel)

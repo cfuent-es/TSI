@@ -1,26 +1,24 @@
+import javax.swing.JOptionPane;
+
 public class CarroEsportivo extends Veiculo{
     
     public CarroEsportivo(int quilometragem, TanqueCombustivel tanqueCombustivel, Freios freios) {
         super(quilometragem, tanqueCombustivel, freios);
     }
 
-    /*
-    @Override
-    public void andar(int distancia, int velocidade) {
-        if (distancia > 0 && velocidade > 0) {
-            int consumo = distancia / 10;
-            if (consumo > getTanqueCombustivel().getQuantidadeCombustivel()) {
-                System.out.println("Não há combustível suficiente para andar essa distância!");
-            } else {
-                setQuilometragem(getQuilometragem() + distancia);
-                getTanqueCombustivel().setQuantidadeCombustivel(getTanqueCombustivel().getQuantidadeCombustivel() - consumo);
-                System.out.println("O carro andou " + distancia + "km a " + velocidade + "km/h");
-            }
-        } else {
-            System.out.println("A distância e a velocidade devem ser maiores que zero!");
-        }
-    }
+    
 
+    public boolean andar(int distancia, int velocidade) {
+        int consumo;
+
+        if(velocidade < 120)
+            consumo = distancia / 10;
+        else
+            consumo = distancia / 5;
+
+        return true;
+    }
+/* */
     @Override
     public void abastecer(int quantidade, Combustivel combustivel) {
         if (quantidade > 0) {

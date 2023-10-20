@@ -32,7 +32,7 @@ public class TanqueCombustivel {
     }
 
     public void setVolumeAtual(int volumeAtual) {
-        this.volumeAtual = volumeAtual;
+        this.volumeAtual -= volumeAtual;
     }
 
     public int getCombustivelUtilizado() {
