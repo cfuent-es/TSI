@@ -19,13 +19,13 @@ class Programa {
         {
             opcao = Integer.parseInt(JOptionPane.showInputDialog(null, "Escolha uma opção: \n\n" +
                                                                         "1 - Andar com o Carro Esportivo \n" +
-                                                                        "2 - Andar com o Carro Sedan \n" +
+                                                                        "2 - Andar com o Carro Sedan \n\n" +
                                                                         "3 - Abastecer o Carro Esportivo \n" +
-                                                                        "4 - Abastecer o Carro Sedan \n" +
+                                                                        "4 - Abastecer o Carro Sedan \n\n" +
                                                                         "5 - Arrumar os Freios do Carro Esportivo \n" +
-                                                                        "6 - Arrumar os Freios do Carro Sedan \n" +
-                                                                        "7 - Verificar a Quilometragem do Carro Esportivo \n" +
-                                                                        "8 - Verificar a Quilometragem do Carro Sedan \n" +
+                                                                        "6 - Arrumar os Freios do Carro Sedan \n\n" +
+                                                                        "7 - Ver informações do Carro Esportivo \n" +
+                                                                        "8 - Ver informações do Carro Sedan \n\n" +
                                                                         "9 - Sair \n\n" +
                                                                         "Digite a opção desejada: "));
 
@@ -48,7 +48,7 @@ class Programa {
                                                                                                 "3 - Diesel \n\n" +
                                                                                                 "Digite a opção desejada: "));
                     quantidade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a quantidade de combustível a ser abastecida: "));
-                    esportivo.abastecer(quantidade, Combustivel.getCombustivel(tipoCombustivel));
+                    esportivo.getTanqueCombustivel().abastecer(quantidade, Combustivel.getCombustivel(tipoCombustivel));
                     break;
                 case 4:
                     tipoCombustivel = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o tipo de combustível: \n\n" +
@@ -57,7 +57,7 @@ class Programa {
                                                                                                 "3 - Diesel \n\n" +
                                                                                                 "Digite a opção desejada: "));
                     quantidade = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite a quantidade de combustível a ser abastecida: "));
-                    sedan.abastecer(quantidade, Combustivel.getCombustivel(tipoCombustivel));
+                    sedan.getTanqueCombustivel().abastecer(quantidade, Combustivel.getCombustivel(tipoCombustivel));
                     break;
                 case 5:
                     esportivo.arrumarFreios(new FreiosABS());
@@ -66,10 +66,10 @@ class Programa {
                     sedan.arrumarFreios(new FreiosTambor());
                     break;
                 case 7:
-                    JOptionPane.showMessageDialog(null, "O Carro Esportivo percorreu " + esportivo.getQuilometragem() + "km");
+                    esportivo.showInformations("Carro Esportivo");
                     break;
                 case 8:
-                    JOptionPane.showMessageDialog(null, "O Carro Sedan percorreu " + sedan.getQuilometragem() + "km");
+                    sedan.showInformations("Carro Sedan");
                     break;
                 case 9:
                     JOptionPane.showMessageDialog(null, "Obrigado por utilizar o Programa Carros!");

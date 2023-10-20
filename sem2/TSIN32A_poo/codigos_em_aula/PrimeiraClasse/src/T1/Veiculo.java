@@ -62,14 +62,31 @@ public abstract class Veiculo {
         return true;
     };
 
-    public void abastecer(int quantidade, Combustivel combustivel)
-    {
-
-    }
-
     public void arrumarFreios(Freios freios)
     {
+        this.setFreios(freios);
+        JOptionPane.showMessageDialog(
+            null, 
+            "Os freios foram arrumados com sucesso!", 
+            "Freios Arrumados", 
+            JOptionPane.INFORMATION_MESSAGE
+        );
+    }
 
+    public void showInformations(String carro)
+    {
+        JOptionPane.showMessageDialog(
+            null, 
+            "Informações do " + carro + ": \n\n" +
+            "Quilometragem: " + this.getQuilometragem() + " km \n" +
+            "Combustível: " + this.getTanqueCombustivel().getCombustivel() + " \n" +
+            "Volume Atual: " + this.getTanqueCombustivel().getVolumeAtual() + " litros \n" +
+            "Capacidade Máxima: " + this.getTanqueCombustivel().getCapacidadeMaxima() + " litros \n" +
+            "Tipo de Freios: " + this.freios.getTipo() + " \n" +
+            "Vida Útil Restante: " + this.getFreios().getVidaUtilRestante() + " km \n",
+            "Informações do " + carro,
+            JOptionPane.INFORMATION_MESSAGE
+        );
     }
 
 }

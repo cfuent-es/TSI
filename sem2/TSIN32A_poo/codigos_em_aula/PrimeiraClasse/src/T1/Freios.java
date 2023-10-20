@@ -37,4 +37,6 @@ public abstract class Freios {
         vidaUtilRestante = vidaUtilTotal;
     };
 
+    public abstract String getTipo();
+
 }

@@ -1,14 +1,14 @@
+import javax.swing.JOptionPane;
+
 public class TanqueCombustivel {
     private Combustivel combustivel;
     private int capacidadeMaxima;
     private int volumeAtual;
-    private int combustivelUtilizado;
 
     public TanqueCombustivel(Combustivel combustivel, int capacidadeMaxima) {
         this.combustivel = combustivel;
         this.capacidadeMaxima = capacidadeMaxima;
         this.volumeAtual = 1;
-        this.combustivelUtilizado = 0;
     }
 
     public Combustivel getCombustivel() {
@@ -35,21 +35,26 @@ public class TanqueCombustivel {
         this.volumeAtual -= volumeAtual;
     }
 
-    public int getCombustivelUtilizado() {
-        return combustivelUtilizado;
+    public void abastecer(int quantidade, Combustivel combustivel)
+    {
+        
+        if(this.combustivel != combustivel){
+            this.volumeAtual = 0;
+        }
+
+        this.combustivel = combustivel;
+        this.volumeAtual += quantidade;
+
+        if(this.volumeAtual > this.capacidadeMaxima){
+            this.volumeAtual = this.capacidadeMaxima;
+            JOptionPane.showMessageDialog(
+                null, 
+                "Atenção: a quantidade de combustível excedeu a capacidade máxima do tanque! Foi abastecido apenas o volume máximo do tanque.", 
+                "Capacidade Máxima Atingida", 
+                JOptionPane.INFORMATION_MESSAGE
+            );
+        }
     }
-
-    public void setCombustivelUtilizado(int combustivelUtilizado) {
-        this.combustivelUtilizado = combustivelUtilizado;
-    }
-
-    public boolean consumir(int quantidade){
-        return true;
-    }
-
-    public void receber(int quantidade, Combustivel combustivel){
-
-    }   
 
 
 }
