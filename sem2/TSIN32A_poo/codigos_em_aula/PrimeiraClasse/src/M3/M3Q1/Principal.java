@@ -14,13 +14,13 @@ public class Principal {
         for (int i = 0; i < qtd; i++) {
             Trabalhador t = new Trabalhador();
             
-            System.out.print("informe o nome do trabalhador");
+            System.out.println("informe o nome do trabalhador");
             t.setNome(entrada.next());
             
-            System.out.print("informe o salario do trabalhador");
+            System.out.println("informe o salario do trabalhador");
             t.setSalario(new BigDecimal(entrada.next()));
             
-            System.out.print("informe o cargo do trabalhador (MED, TRAD, PA, DEV)");
+            System.out.println("informe o cargo do trabalhador (MED, TRAD, PA, DEV)");
             String cargo = entrada.next();
             switch (cargo) {
                 case "MED": {
