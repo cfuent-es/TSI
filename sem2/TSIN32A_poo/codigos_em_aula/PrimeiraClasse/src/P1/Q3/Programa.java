@@ -1,4 +1,4 @@
-//package P1.Q3;
+package P1.Q3;
 
 public class Programa {
 	public static void main(String[] args) {

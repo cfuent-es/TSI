@@ -1,4 +1,4 @@
-//package M3.M3Q1;
+package M3.M3Q1;
 
 import java.util.Scanner;
 import java.math.BigDecimal;

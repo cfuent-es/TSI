@@ -1,3 +1,5 @@
+package T1;
+
 public class FreiosTambor extends Freios{
 
     private String tipo = "Tambor";

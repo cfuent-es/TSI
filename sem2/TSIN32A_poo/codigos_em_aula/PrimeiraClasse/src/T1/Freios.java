@@ -1,3 +1,5 @@
+package T1;
+
 public abstract class Freios {
     private int vidaUtilTotal;
     private int vidaUtilRestante;

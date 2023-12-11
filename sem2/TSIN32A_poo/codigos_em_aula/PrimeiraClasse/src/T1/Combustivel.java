@@ -1,3 +1,5 @@
+package T1;
+
 public enum Combustivel {
     GASOLINA,
     ALCOOL,

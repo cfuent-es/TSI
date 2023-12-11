@@ -1,3 +1,5 @@
+package T1;
+
 public class FreiosABS extends Freios {
 
     private String tipo = "ABS";

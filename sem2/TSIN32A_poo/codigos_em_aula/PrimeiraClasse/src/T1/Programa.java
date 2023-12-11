@@ -1,3 +1,5 @@
+package T1;
+
 import javax.swing.*;
 
 class Programa {

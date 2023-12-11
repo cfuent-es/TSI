@@ -1,4 +1,4 @@
-//package L2.L2Q4;
+package L2.L2Q4;
 
 public enum Crime {
     ASSALTO("ASSALTO"),
