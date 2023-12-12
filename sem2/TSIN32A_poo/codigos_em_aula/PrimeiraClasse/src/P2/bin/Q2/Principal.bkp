@@ -1,0 +1,73 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Principal {
+
+	public static void main(String[] args) {
+        JsonSerializer serializer = new JsonSerializer();
+
+        List<TrabalhadorJson> trabalhadoresJson = serializer.deserializeTrabalhadores("trabalhadores-data-nascimento-tempo-servico.json");
+        
+        System.out.println("digite a data de referencia (dd/mm/aaaa):");
+        Scanner scanner = new Scanner(System.in);
+        String dataReferencia = scanner.nextLine();
+        scanner.close();
+
+        List<Trabalhador> trabalhadores = new ArrayList<>();
+        for(TrabalhadorJson trabalhadorJson : trabalhadoresJson) {
+            trabalhadores.add(new Trabalhador(trabalhadorJson.getNome(), trabalhadorJson.getDataNascimento(), trabalhadorJson.getProfissao(), trabalhadorJson.getTempoServico(), dataReferencia));
+        }
+
+        System.out.println("Total de trabalhadores: " + trabalhadores.size());
+
+        int totalTrabalhadoresAposentar = 0;
+        int totalTrabalhadoresMedicos = 0;
+        int totalTrabalhadoresProfessores = 0;
+        int totalTrabalhadoresMotoristas = 0;
+        int totalTrabalhadoresPoliciais = 0;
+
+        for(Trabalhador trabalhador : trabalhadores) {
+            switch (trabalhador.getProfissao()) {
+                case "Medico":
+                    if(trabalhador.getIdade() >= 65 || trabalhador.getTempoServico() >= 20)
+                        totalTrabalhadoresAposentar++;
+                    else
+                        totalTrabalhadoresMedicos++;
+                    break;
+
+                case "Professor":
+                    if(trabalhador.getIdade() >= 62 || trabalhador.getTempoServico() >= 19)
+                        totalTrabalhadoresAposentar++;
+                    else
+                        totalTrabalhadoresProfessores++;
+                    break;
+
+                case "Motorista":
+                    if(trabalhador.getIdade() >= 60 || trabalhador.getTempoServico() >= 17)
+                        totalTrabalhadoresAposentar++;
+                    else
+                        totalTrabalhadoresMotoristas++;
+                    break;
+
+                case "Policial":
+                    if(trabalhador.getIdade() >= 55 || trabalhador.getTempoServico() >= 16)
+                        totalTrabalhadoresAposentar++;
+                    else
+                        totalTrabalhadoresPoliciais++;
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+
+        System.out.println("Total de trabalhadores que podem se aposentar: " + totalTrabalhadoresAposentar);
+        System.out.println("Total de medicos que nao podem se aposentar: " + totalTrabalhadoresMedicos);
+        System.out.println("Total de professores que nao podem se aposentar: " + totalTrabalhadoresProfessores);
+        System.out.println("Total de motoristas que nao podem se aposentar: " + totalTrabalhadoresMotoristas);
+        System.out.println("Total de policiais que nao podem se aposentar: " + totalTrabalhadoresPoliciais);
+
+	}
+
+}

@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Principal {
+
+	public static void main(String[] args) {
+        JsonSerializer serializer = new JsonSerializer();
+
+        List<Trabalhador> trabalhadores = serializer.deserializeTrabalhadores("trabalhadores-idade.json");
+
+        System.out.println("Total de trabalhadores: " + trabalhadores.size());
+
+        int totalTrabalhadoresAposentar = 0;
+        int totalTrabalhadoresMedicos = 0;
+        int totalTrabalhadoresProfessores = 0;
+        int totalTrabalhadoresMotoristas = 0;
+        int totalTrabalhadoresPoliciais = 0;
+
+        for (Trabalhador trabalhador : trabalhadores) {
+            switch (trabalhador.getProfissao()) {
+                case "Medico":
+                    if(trabalhador.getIdade() >= 60)
+                        totalTrabalhadoresAposentar++;
+                    else 
+                        totalTrabalhadoresMedicos++;
+                    break;
+
+                case "Professor":
+                    if(trabalhador.getIdade() >= 61)
+                        totalTrabalhadoresAposentar++;
+                    else 
+                        totalTrabalhadoresProfessores++;
+                    break;
+
+                case "Motorista":
+                    if(trabalhador.getIdade() >= 62)
+                        totalTrabalhadoresAposentar++;
+                    else 
+                        totalTrabalhadoresMotoristas++;
+                    break;
+
+                case "Policial":
+                    if(trabalhador.getIdade() >= 63)
+                        totalTrabalhadoresAposentar++;
+                    else 
+                        totalTrabalhadoresPoliciais++;
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+
+        System.out.println("Total de trabalhadores que podem se aposentar: " + totalTrabalhadoresAposentar);
+        System.out.println("Total de medicos que nao podem se aposentar: " + totalTrabalhadoresMedicos);
+        System.out.println("Total de professores que nao podem se aposentar: " + totalTrabalhadoresProfessores);
+        System.out.println("Total de motoristas que nao podem se aposentar: " + totalTrabalhadoresMotoristas);
+        System.out.println("Total de policiais que nao podem se aposentar: " + totalTrabalhadoresPoliciais);
+
+	}
+
+}
