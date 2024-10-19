@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <form action="select.php" method="post">
+        <b>Qual o seu processador?</b>
+        <select name="processador" id="processador">
+            <option value="Pentium">Pentium</option>
+            <option value="AMD">AMD</option>
+            <option value="Celeron">Celeron</option>
+        </select>
+        <br><br>
+        <b>Livros que deseja comprar</b><br>
+        <p>Obs.: segure o CTRL para selecinoar mais de um livro.</p>
+        <select name="livros[]" id="livros" multiple>
+            <option value="A Biblia do PHP 4">A Biblia do PHP 4</option>
+            <option value="PHP Professional">PHP Professional</option>
+            <option value="Iniciando em PHP">Iniciando em PHP</option>
+            <option value="Novidades no PHP 5">Novidades no PHP 5</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
