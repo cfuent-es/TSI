@@ -15,4 +15,4 @@ Ordenados por autor (ordem decrescente):
 Neuromancer(William Gibson), Fahrenheit 451(Ray Bradbury), O Senhor dos Anéis(J.R.R. Tolkien), 1984(George Orwell), Duna(Frank Herbert)
 
 Ordenados por custo-benefício (ordem crescente):
-1984(144.00), Fahrenheit 451(161.00), Neuromancer(180.00), Duna(211.50), O Senhor dos Anéis(245.00)
+1984(17.40), Fahrenheit 451(19.80), Neuromancer(22.25), Duna(24.85), O Senhor dos Anéis(27.45)

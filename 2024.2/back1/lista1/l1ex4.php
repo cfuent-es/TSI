@@ -1,5 +1,37 @@
 <?php
 
+$total = 0;
+
+if(isset($_POST['produto'])) {
+    $compras = $_POST['produto'];
+    foreach($compras as $compra)
+    {
+        switch($compra)
+        {
+            case 'arroz':
+                $total += 25.9;
+                break;
+            case 'oleo':
+                $total += 89.9;
+                break;
+            case 'kuat':
+                $total += 34.9;
+                break;
+            case 'feijao':
+                $total += 38.5;
+                break;
+            case 'acucar':
+                $total += 12.9;
+                break;
+            case 'cafe':
+                $total += 78.9;
+                break;
+        }
+    }
+    echo "Total da compra: R$ " . number_format($total, 2, ',', '.') . "<br>";
+}
+
+/*
 echo "Escolha a quantidade de produtos:\n";
 
 echo "Arroz 5 Kg (R$ 25,90): ";
@@ -37,4 +69,45 @@ foreach($compras as $item => $compra)
         $total += $compra['qtd'] * $compra['valor'];
     }
 }
-echo "Total da compra: R$ " . number_format($total, 2, ',', '.') . "\n\n";
+echo "Total da compra: R$ " . number_format($total, 2, ',', '.') . "\n\n";*/
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 1 - Ex 4</title>
+</head>
+<body>
+    <form action="" method="post">
+        <label>
+            <input type="checkbox" name="produto[]" value="arroz">
+            Arroz 5 Kg (R$ 25,90)
+        </label><br>
+        <label>
+            <input type="checkbox" name="produto[]" value="oleo">
+            Caixa de óleo de soja com 10 (R$ 89,90)
+        </label><br>
+        <label>
+            <input type="checkbox" name="produto[]" value="kuat">
+            Fardo guaraná Kuat 8 unidades (R$ 34.90)
+        </label><br>
+        <label>
+            <input type="checkbox" name="produto[]" value="feijao">
+            Feijão carioquinha 10 Kg  (R$ 38,50)
+        </label><br>
+        <label>
+            <input type="checkbox" name="produto[]" value="acucar">
+            Açucar mascavo 5kg (R$ 12,90)
+        </label><br>
+        <label>
+            <input type="checkbox" name="produto[]" value="cafe">
+            Fardo café com 10 unidades (R$ 78,90)
+        </label><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
