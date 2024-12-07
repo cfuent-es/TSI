@@ -1,0 +1,27 @@
+Operação, descrição da ação
+Feito,alteração de fonte para Arial
+Feito,inserção de texto: Novo texto!
+Feito,alteração de cor de fundo para azul
+Desfeito,-
+Feito,inserção de imagem: logotipo.png
+Feito,negrito aplicado ao texto selecionado
+Desfeito,-
+Feito,alteração de tamanho da fonte para 14pt
+Feito,inserção de lista numerada
+Desfeito,-
+Feito,recorte de parágrafo
+Feito,colagem de parágrafo
+Feito,inserção de hiperlink: www.exemplo.com
+Feito,alinhamento de texto à direita
+Desfeito,-
+Feito,busca e substituição: exemplo por demonstração
+Feito,inserção de cabeçalho: Relatório de Progresso
+Feito,inserção de rodapé com numeração de páginas
+Desfeito,-
+Feito,aplicação de itálico ao texto: importante
+Feito,inserção de tabela 3x3
+Desfeito,-
+Feito,alteração de espaçamento entre linhas para 1.5
+Feito,inserção de gráfico: vendas_2023.png
+Desfeito,-
+Feito,ajuste de margens do documento
