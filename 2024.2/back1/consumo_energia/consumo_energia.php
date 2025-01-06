@@ -2,36 +2,6 @@
 
 require_once('conexao.php');
 
-$sql = "INSERT INTO consumo_energia (
-            nome, 
-            cpf, 
-            sexo, 
-            nascimento, 
-            endereco, 
-            numero, 
-            bairro, 
-            cep, 
-            email,
-            site, 
-            data_vencimento,
-            unidade_consumidora,
-            kvh,
-            valor_total
-        ) VALUES (
-            '{$_POST['nome']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-            '{$_POST['']}',
-        )
-        ";
-
 if ($_POST) {
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
@@ -47,10 +17,47 @@ if ($_POST) {
     $unidade_consumidora = $_POST['unidade_consumidora'];
     $kvh = $_POST['kvh'];
     $valor_total = $_POST['valor_total'];
+
+    $sql = "INSERT INTO consumo_energia (
+        nome, 
+        cpf, 
+        sexo, 
+        nascimento, 
+        endereco, 
+        numero, 
+        bairro, 
+        cep,    
+        email,
+        site, 
+        data_vencimento,
+        unidade_consumidora,
+        kvh,
+        valor_total
+    ) VALUES (
+        '{$_POST['nome']}',
+        '{$_POST['cpf']}',
+        '{$_POST['sexo']}',
+        '{$_POST['nascimento']}',
+        '{$_POST['endereco']}',
+        '{$_POST['numero']}',
+        '{$_POST['bairro']}',
+        '{$_POST['cep']}',
+        '{$_POST['email']}',
+        '{$_POST['site']}',
+        '{$_POST['data_vencimento']}',
+        '{$_POST['unidade_consumidora']}',
+        '{$_POST['kvh']}',
+        '{$_POST['valor_total']}'
+    )
+    ";
+
+    print_r($sql);
+
+    mysqli_query($conexao, $sql);
 }
 
     //validação campo site
-    if (!filter_var($site, FILTER_VALIDATE_URL)) {
+    if (isset($iste) && !filter_var($site, FILTER_VALIDATE_URL)) {
         $site_erro = "Site inválido";
     }
 

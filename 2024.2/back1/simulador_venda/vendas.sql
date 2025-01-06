@@ -1,0 +1,197 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 04/12/2024 às 01:29
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Banco de dados: `vendas`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `categoria`
+--
+
+CREATE TABLE `categoria` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `nome`) VALUES
+(1, 'celular'),
+(2, 'teste');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `produto`
+--
+
+CREATE TABLE `produto` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `preco` decimal(10,2) NOT NULL,
+  `id_categoria` int(11) DEFAULT NULL,
+  `categoria_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `produto`
+--
+
+INSERT INTO `produto` (`id`, `nome`, `preco`, `id_categoria`, `categoria_id`) VALUES
+(1, 'Iphone XR', 2222.00, 1, 0),
+(2, 'Iphone', 2222.00, NULL, 2),
+(3, 'Iphone 3333', 2222.00, NULL, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
+(1, 'sdfasdfas', 'marcelo@teste.com', '$2y$10$5yK2AeuffP0ws5AQLwOnXe3X9quRHImfUFLJZ4yUFaERF1XfmxKeK'),
+(5, 'juca', 'joao@teste.com', '$2y$10$9ztnFk5N8gobNn06VfO48efHxmQU0zbYRhLmOVH9ziVE8b5SpszKy'),
+(6, 'Lucas', 'lucas@teste.com', '$2y$10$6EtZ0oJXKRYxYeya58cgpOUaV0BYYahED9ij/7LGUKlMQxvxyxdQS');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `venda`
+--
+
+CREATE TABLE `venda` (
+  `id` int(11) NOT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_produto` int(11) DEFAULT NULL,
+  `quantidade` int(11) NOT NULL,
+  `data_venda` datetime DEFAULT current_timestamp(),
+  `condicoes_pagamento` varchar(50) NOT NULL,
+  `quantidade_parcelas` int(11) DEFAULT NULL,
+  `produto_id` int(11) NOT NULL,
+  `usuario_id` int(11) NOT NULL,
+  `total` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `venda`
+--
+
+INSERT INTO `venda` (`id`, `id_usuario`, `id_produto`, `quantidade`, `data_venda`, `condicoes_pagamento`, `quantidade_parcelas`, `produto_id`, `usuario_id`, `total`) VALUES
+(1, 1, 1, 23, '2024-12-03 19:21:25', '', NULL, 0, 0, NULL),
+(2, 1, 2, 5, '2024-12-03 19:21:51', '', NULL, 0, 0, NULL),
+(3, 5, 1, 23, '2024-12-03 19:23:06', '', NULL, 0, 0, NULL),
+(4, NULL, NULL, 1, '2024-12-03 19:47:00', 'parcelado', 3, 2, 5, 2222.00);
+
+--
+-- Índices para tabelas despejadas
+--
+
+--
+-- Índices de tabela `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `produto`
+--
+ALTER TABLE `produto`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_categoria` (`id_categoria`);
+
+--
+-- Índices de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Índices de tabela `venda`
+--
+ALTER TABLE `venda`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_produto` (`id_produto`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `produto`
+--
+ALTER TABLE `produto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de tabela `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de tabela `venda`
+--
+ALTER TABLE `venda`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `produto`
+--
+ALTER TABLE `produto`
+  ADD CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`id_categoria`) REFERENCES `categoria` (`id`);
+
+--
+-- Restrições para tabelas `venda`
+--
+ALTER TABLE `venda`
+  ADD CONSTRAINT `venda_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id`),
+  ADD CONSTRAINT `venda_ibfk_2` FOREIGN KEY (`id_produto`) REFERENCES `produto` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
