@@ -1,46 +1,49 @@
 import java.util.Collection;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
 public class Vertice implements Comparable<Vertice> {
-    private Integer id;
     private String nome;
-    private Map<Integer, Vertice> adjacencias;
+    private Map<String, Aresta> adjacencias;
 
-    public Vertice(int id, String nome) {
-        this.id = id;
+    public Vertice(String nome) {
         this.nome = nome;
-        this.adjacencias = new TreeMap<Integer, Vertice>();
-    }
-
-    public Integer getId() {
-        return id;
+        this.adjacencias = new TreeMap<String, Aresta>();
     }
 
     public String getNome() {
         return nome;
     }
 
-    public Set<Integer> getAdjacenciasPorId(){
-        return adjacencias.keySet();
+    public String printAdjacencias() {
+        StringBuffer sb = new StringBuffer();
+        for (Map.Entry<String, Aresta> entry : adjacencias.entrySet()) {
+            sb
+                .append("[")
+                .append(entry.getKey())
+                .append(", ")
+                .append(entry.getValue())
+                .append("]")
+                .append(", ");
+        }
+        // Remove the last ", " if it exists
+        if (sb.length() > 0) {
+            sb.setLength(sb.length() - 2);
+        }
+        return sb.toString();
     }
 
-    public Collection<Vertice> getAdjacenciasPorValor(){
-        return adjacencias.values();
-    }
-
-    public void addAdjacencia(Vertice vertice) {
-        adjacencias.putIfAbsent(vertice.getId(), vertice);
+    public void addAdjacencia(String destino, Integer perigo, Integer distancia) {
+        adjacencias.putIfAbsent(destino, new Aresta(perigo, distancia));
     }
 
     @Override
     public int compareTo(Vertice outro) {
-        return this.id.compareTo(outro.id);
+        return this.nome.compareTo(outro.nome);
     }
 
     @Override
         public String toString() {
-        return "Vertice [id=" + id + ", nome=" + nome + "]";
+        return "Vertice [" + nome + "]";
     }
 }
