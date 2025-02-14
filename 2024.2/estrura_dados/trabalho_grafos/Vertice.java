@@ -1,10 +1,9 @@
-import java.util.Collection;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Vertice implements Comparable<Vertice> {
     private String nome;
-    private Map<String, Aresta> adjacencias;
+    public Map<String, Aresta> adjacencias;
 
     public Vertice(String nome) {
         this.nome = nome;
@@ -34,7 +33,7 @@ public class Vertice implements Comparable<Vertice> {
     }
 
     public void addAdjacencia(String destino, Integer perigo, Integer distancia) {
-        adjacencias.putIfAbsent(destino, new Aresta(perigo, distancia));
+        adjacencias.put(destino, new Aresta(perigo, distancia));
     }
 
     @Override

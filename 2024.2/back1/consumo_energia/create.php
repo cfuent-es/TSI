@@ -51,9 +51,9 @@ if ($_POST) {
     )
     ";
 
-    print_r($sql);
-
     mysqli_query($conexao, $sql);
+
+    header('Location: index.php');
 }
 
     //validação campo site
@@ -72,6 +72,9 @@ if ($_POST) {
     <title>Formulário Consumo Energia</title>
 </head>
 <body>
+ 
+    <?php require_once('header.php'); ?>
+
     <div class="container mt-5">
         <form action="" method="post">
 
