@@ -6,6 +6,20 @@
 </head>
 <body>
 	<h1>Documentos cadastrados</h1>
+	
+	<table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Ações</th>
+        </tr>
+        <tr th:each="documento : ${documentos}">
+            <td th:text="${documento.id}"></td>
+            <td th:text="${documento.nome}"></td>
+            <td><a th:href="@{/editarDocumento(id=${documento.id})}">Editar</a></td>
+        </tr>
+    </table>
 
 </body>
 </html>

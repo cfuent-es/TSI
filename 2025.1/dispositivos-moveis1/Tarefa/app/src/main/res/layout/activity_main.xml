@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ed_descricao"
-        android:hint="Descrição da tarefa" />
+        android:hint="@string/descricao_tarefa" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,25 +24,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Duração:" />
+            android:text="@string/duracao" />
 
         <EditText
             android:layout_width="50sp"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:hint="N"
             android:id="@+id/ed_horas" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="horas" />
+            android:text="@string/horas" />
 
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Prioridade:" />
+        android:text="@string/prioridade" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -54,20 +55,20 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alta"
+            android:text="@string/alta"
             android:id="@+id/rb_alta" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Média"
+            android:text="@string/media"
             android:id="@+id/rb_media"
             android:checked="true" />
 
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Baixa"
+            android:text="@string/baixa"
             android:id="@+id/rb_baixa" />
 
     </RadioGroup>
@@ -75,7 +76,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirmar"
+        android:text="@string/confirmar"
         android:onClick="confirmar"
         android:layout_gravity="right" />
 
@@ -94,13 +95,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Editar"
+            android:text="@string/editar"
             android:onClick="editar" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remover"
+            android:text="@string/remover"
             android:onClick="remover" />
 
 

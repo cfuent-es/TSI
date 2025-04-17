@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Task</string>
+    <string name="prioridade">Priority</string>
+    <string name="alta">High</string>
+    <string name="media">Medium</string>
+    <string name="baixa">Low</string>
+    <string name="confirmar">Confirm</string>
+    <string name="descricao_tarefa">Task Description</string>
+    <string name="duracao">Duration:</string>
+    <string name="editar">Edit</string>
+    <string name="horas">hours</string>
+    <string name="remover">Delete</string>
+    <string name="msg_descr_vazia">Task description must be informed</string>
+    <string name="msg_erro_numero">Duration is not a valid number</string>
+</resources>

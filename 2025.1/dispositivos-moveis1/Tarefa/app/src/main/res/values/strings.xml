@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Tarefa</string>
+    <string name="descricao_tarefa">Descrição da tarefa</string>
+    <string name="duracao">Duração:</string>
+    <string name="horas">horas</string>
+    <string name="prioridade">Prioridade:</string>
+    <string name="alta">Alta</string>
+    <string name="media">Média</string>
+    <string name="baixa">Baixa</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="editar">Editar</string>
+    <string name="remover">Remover</string>
+    <string name="msg_descr_vazia">Deve informar uma descrição da tarefa</string>
+    <string name="msg_erro_numero">A duração não é um número válido</string>
 </resources>
