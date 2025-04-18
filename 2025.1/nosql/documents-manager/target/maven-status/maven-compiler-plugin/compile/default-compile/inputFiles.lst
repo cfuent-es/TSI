@@ -1,0 +1,7 @@
+/home/cesar/Programming/TSI/2025.1/nosql/documents-manager/src/main/java/es/cfuent/documents_manager/DocumentsManagerApplication.java
+/home/cesar/Programming/TSI/2025.1/nosql/documents-manager/src/main/java/es/cfuent/documents_manager/controllers/AuthorsController.java
+/home/cesar/Programming/TSI/2025.1/nosql/documents-manager/src/main/java/es/cfuent/documents_manager/controllers/DocumentsController.java
+/home/cesar/Programming/TSI/2025.1/nosql/documents-manager/src/main/java/es/cfuent/documents_manager/controllers/HomeController.java
+/home/cesar/Programming/TSI/2025.1/nosql/documents-manager/src/main/java/es/cfuent/documents_manager/models/Author.java
+/home/cesar/Programming/TSI/2025.1/nosql/documents-manager/src/main/java/es/cfuent/documents_manager/models/Document.java
+/home/cesar/Programming/TSI/2025.1/nosql/documents-manager/src/main/java/es/cfuent/documents_manager/persistence/DataBase.java

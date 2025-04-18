@@ -26,5 +26,9 @@ public class BancoDeDados {
 	public List<Documento> listarDocumentos() {
 		return this.listaDocumentos;
 	}
+	
+	public List<Autor> listarAutores() {
+		return this.listaAutores;
+	}
 
 }

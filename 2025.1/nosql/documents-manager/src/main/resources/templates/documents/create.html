@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    
+    <head th:replace="~{fragments :: head}"></head>
+
+    <body>
+        
+        <div th:replace="~{fragments :: header}"></div>
+
+        <div class="container mt-4">
+            <h1>Novo Documento</h1>
+            <form method="POST" action="/documents/create">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Título</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Digite o título" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="author" class="form-label">Author</label>
+                    <select id="author" name="author" class="form-select">
+                        <option 
+                            th:each="author : ${authors}" 
+                            th:value="${author.name}" 
+                            th:text="${author.name}"
+                        ></option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descrição</label>
+                    <textarea class="form-control" id="description" name="description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="content" class="form-label">Conteúdo</label>
+                    <textarea class="form-control" id="content" name="content"></textarea>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Scripts -->
+        <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    </body>
+</html>
