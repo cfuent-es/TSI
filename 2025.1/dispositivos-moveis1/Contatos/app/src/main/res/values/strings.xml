@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Contatos</string>
+    <string-array name="opcoes_categoria">
+        <item>Trabalho</item>
+        <item>Amigos</item>
+        <item>Familia</item>
+        <item>Clube</item>
+    </string-array>
+</resources>
