@@ -1,1 +1,7 @@
+es/cfuent/documents_manager/controllers/DocumentsController.class
+es/cfuent/documents_manager/models/Author.class
+es/cfuent/documents_manager/persistence/DataBase.class
+es/cfuent/documents_manager/models/Document.class
 es/cfuent/documents_manager/DocumentsManagerApplication.class
+es/cfuent/documents_manager/controllers/AuthorsController.class
+es/cfuent/documents_manager/controllers/HomeController.class
