@@ -24,4 +24,8 @@ public class Categoria implements Serializable {
         return contas;
     }
 
+    public void addConta(Conta conta) {
+        this.contas.add(conta);
+    }
+
 }

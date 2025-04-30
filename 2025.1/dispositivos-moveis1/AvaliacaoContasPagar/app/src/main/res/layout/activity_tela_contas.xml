@@ -12,34 +12,91 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Nome da Categoria" 
-        android:id="@+id/nomeCategoria" 
+        android:text="Nome da Categoria"
+        android:id="@+id/edNomeCategoria"
         android:textSize="18sp" 
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Despesa:"
-        android:id="@+id/total"/>
+        android:text="Despesa:"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/valor"
+        android:id="@+id/edDescricaoConta"
         android:textSize="18sp"
         android:hint="Descrição da despesa" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="Valor:"
+            android:id="@+id/total"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="Vencimento:"
+            android:id="@+id/total"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text=""
+            android:id="@+id/total"/>
+
+    </LinearLayout>
 
     
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
         android:orientation="horizontal">
-        
 
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:id="@+id/edValorConta"
+            android:hint="R$ 0,00" />
 
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:id="@+id/edVencimentoConta"
+            android:hint="DD/MM/AAAA" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginStart="6dp"
+            android:text="Salvar"
+            android:onClick="salvarConta" />
 
     </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listaContas" />
 
 </LinearLayout>
