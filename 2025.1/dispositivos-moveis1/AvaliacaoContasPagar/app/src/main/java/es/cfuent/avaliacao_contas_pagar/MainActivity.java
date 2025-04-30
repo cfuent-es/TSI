@@ -1,5 +1,6 @@
 package es.cfuent.avaliacao_contas_pagar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                telaContas(view);
+            }
+        });
 
     }
 
@@ -91,5 +98,12 @@ public class MainActivity extends AppCompatActivity {
             Categoria categoria = listaCategorias.get(posicaoSelecionada);
             edNomeCategoria.setText(categoria.getNome());
         }
+    }
+
+    public void telaContas(View view) {
+        Intent intent = new Intent(this, TelaContas.class);
+        int pos = lista.getCheckedItemPosition();
+        intent.putExtra("categoria", listaCategorias.get(pos));
+        startActivity(intent);
     }
 }
