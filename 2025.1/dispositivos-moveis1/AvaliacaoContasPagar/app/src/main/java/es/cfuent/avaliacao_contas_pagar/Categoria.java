@@ -2,14 +2,15 @@ package es.cfuent.avaliacao_contas_pagar;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Categoria implements Serializable {
 
     private String nome;
-    private ArrayList<Conta> contas;
+    private LinkedList<Conta> contas;
 
     public Categoria() {
-        contas = new ArrayList<>();
+        contas = new LinkedList<>();
     }
 
     public void setNome(String nome) {
@@ -20,12 +21,38 @@ public class Categoria implements Serializable {
         return nome;
     }
 
-    public ArrayList<Conta> getContas() {
+    public LinkedList<Conta> getContas() {
         return contas;
+    }
+
+    public double getTotal() {
+        double total = 0;
+        for (Conta conta : contas) {
+            total += conta.getValor();
+        }
+        return total;
+    }
+
+    public double getPago() {
+        double pago = 0;
+        for (Conta conta : contas) {
+            if (conta.isPaga()) {
+                pago += conta.getValor();
+            }
+        }
+        return pago;
+    }
+
+    public double getApagar() {
+        return getTotal() - getPago();
     }
 
     public void addConta(Conta conta) {
         this.contas.add(conta);
+    }
+
+    public void setContas(LinkedList<Conta> contas) {
+        this.contas = contas;
     }
 
 }

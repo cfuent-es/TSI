@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="Contas"
+        android:icon="@drawable/ic_bills"
+        android:onClick="contasMenu"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="Editar"
+        android:icon="@drawable/ic_editar"
+        android:onClick="editarMenu"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="Remover"
+        android:icon="@drawable/ic_remover"
+        android:onClick="remover"
+        app:showAsAction="ifRoom"/>
+
+    <item android:title="Sair"
+        android:onClick="sair"
+        android:icon="@drawable/ic_sair"
+        app:showAsAction="never"/>
+
+
+</menu>

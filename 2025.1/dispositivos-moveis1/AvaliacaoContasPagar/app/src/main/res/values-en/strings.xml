@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Accounts Payable</string>
+    <string name="nome_da_categoria">Category Name</string>
+    <string name="total">Total</string>
+    <string name="pago">Paid</string>
+    <string name="a_pagar">To Pay</string>
+    <string name="conta_descricao">Description</string>
+    <string name="conta_paga">paid</string>
+</resources>

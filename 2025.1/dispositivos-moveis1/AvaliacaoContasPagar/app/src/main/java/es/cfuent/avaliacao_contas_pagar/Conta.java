@@ -9,6 +9,7 @@ public class Conta implements Serializable {
     private String vencimento;
     private double valor;
     private Categoria categoria;
+    private boolean paga;
 
     public String getDescricao() {
         return descricao;
@@ -32,6 +33,14 @@ public class Conta implements Serializable {
 
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    public boolean isPaga() {
+        return paga;
+    }
+
+    public void setPaga(boolean paga) {
+        this.paga = paga;
     }
 
     public Categoria getCategoria() {
